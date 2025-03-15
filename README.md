@@ -13,22 +13,3 @@
 - [Item Fourth](notes/install.md)
 
 
-## How to Use the Code
-
-### A. Clone the repository: 
-
-```bash
-    git clone https://github.com/SalarKhosravi/DjangoBasic.git
- ```
-
-### B. Install dependencies
-   ```bash
-      pip install -r requirements.txt
-   ```
-
-### C. Run the Django server
-   ```bash
-      python manage.py runserver
-   ```
-
-Enjoy learning Django!
