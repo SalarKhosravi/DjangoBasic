@@ -1,0 +1,54 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.log
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+
+# macOS
+.DS_Store
+
+# Coverage reports
+.coverage
+*.cover
+*.py,cover
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# Test and coverage results
+*.diff
+*.patch
+*.log
+*.coverage
+*.hypothesis/
+
+# Pipenv
+Pipfile.lock
+
+
+# JetBrains
+.idea/
+
+# Environment variables file (for sensitive information)
+.env
