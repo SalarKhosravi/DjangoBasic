@@ -12,7 +12,7 @@ This type of view, run a function that triggers a HttpResponse (S03E02)
 ![url_views](./assets/img/url_views.png)
 
 in `views.py` file
-```
+```python
 from django.http import HttpResponse
 
 def index(request):
@@ -25,7 +25,7 @@ def detail(request, question_id):
 
 
 For route (`domain.com/home`) in `urls.py` file of the app folder
-```
+```python
 from django.urls import path
 from . import views
 
@@ -35,7 +35,7 @@ urlpatterns = [
 ```
 
 in `urls.py` file in the main app folder for route (`domain.com/blog/home`)
-```
+```python
 from django.urls import path, include
 urlpatterns = [
     path("/blog", include("blog.urls")),
@@ -48,7 +48,7 @@ urlpatterns = [
 
 The easiest way is writing codes in `views.py` file. In the next step we can return a `render`
 
-```
+```python
 from django.http import HttpResponse
 
 def index(request):
@@ -82,7 +82,7 @@ def show_post(request, id):
 
 In django.http domain, besides HttpResponse, we have many methods and class, namely as follows:
 
-```
+```python
     HttpResponsePermanentRedirect 303
     HttpResponseNotModified
     HttpResponseBadRequest 404
@@ -95,7 +95,7 @@ In django.http domain, besides HttpResponse, we have many methods and class, nam
 
 Each url can have a unique name to be called back by `reverse()` in `views()`
 
-```
+```python
 # url.py
     path("home/", views.home, name="home_page")
 
@@ -115,7 +115,7 @@ We need to create a file with `templates/404.html` file name in root directory.
 Then, like other templates, extend from basic.html and follow suit.
 Finally, set `raise Http404()` error in case no data founded.
 
-```django
+```python
 def index(request, id):
     try:
         data = Post.objects.get(pk=id)
