@@ -10,6 +10,6 @@
 - [Install django](notes/install.md)
 - [Urls and Views](notes/urls_views.md)
 - [Html Template](notes/template.md)
-- [Item Fourth](notes/install.md)
+- [Models and DataBase](notes/models.md)
 
 
