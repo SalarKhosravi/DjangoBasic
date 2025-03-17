@@ -57,7 +57,7 @@ To do an action on the value of a variable in HTML output, we can use filters su
 ```
 
 #### 2-4- URL Tag
-```django
+```python
 # basic format
     {% url 'some-url-name' arg1=v1 arg2=v2 %}
 
