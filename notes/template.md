@@ -77,7 +77,7 @@ and basic schema of html come from this basic.html file, then we need first a fo
 directory name `templates` then, define the 
 templates folder in setting
 
-```django
+```python
 TEMPLATES = [
 	{
         'DIRS': [ BASE_DIR / 'templates' ]
@@ -176,7 +176,7 @@ Context processors are simply functions that add data in each and every page of 
 To have one, we need to create file name `myapp/context_processors.py` and then 
 set a function there to return a dictionary.
 
-```django
+```python
 def site_name(request):
     return {'SITE_NAME': 'My Awesome Site'}
 ```
@@ -184,7 +184,7 @@ def site_name(request):
 now variable name `SITE_NAME` is accessible everywhere, 
 but it is necessary to tell django our processor
 
-```django
+```python
 #setting.py
     TEMPLATES = [
         {
