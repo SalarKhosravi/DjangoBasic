@@ -8,14 +8,14 @@ First it is necessary to create an HTML file in `app_name/templates/app_name` fo
 we must put the app_name in INSTALLED_APPS in `setting.py` to make django know our app. 
 Also make sure the `APP_DIRS` is True in Template setting.
 
-```django
+```python
 #views.py
-    from django.shortcuts import render
-    
-    def index(request):
-        context = {id: 3}
-        return render(request, "posts/index.html", context)
-        # render(request, "app_name/file_name.html", context)
+from django.shortcuts import render
+
+def index(request):
+    context = {id: 3}
+    return render(request, "posts/index.html", context)
+    # render(request, "app_name/file_name.html", context)
 ```
 
 ### 2- Template Directives ([Django Template Language](https://docs.djangoproject.com/en/5.1/ref/templates/language/))
@@ -219,7 +219,7 @@ More builtin variable in `django.template.context_processors.auth` as `Context P
 
 ##### 1. Check user logged in
 
-```html
+```django
 {% if user.is_authenticated %}
     <p>Welcome, {{ user.username }}!</p>
 {% else %}
@@ -229,7 +229,7 @@ More builtin variable in `django.template.context_processors.auth` as `Context P
 
 ##### 2. Check user permissions
 
-```html
+```django
 {% if perms.app_name.can_edit %}
     <p>You have permission to edit this.</p>
 {% endif %}
@@ -237,7 +237,7 @@ More builtin variable in `django.template.context_processors.auth` as `Context P
 
 ##### 3. Flash messages in `django.contrib.messages`
 
-```html
+```django
 {% for message in messages %}
     <p>{{ message }}</p>
 {% endfor %}
@@ -245,7 +245,7 @@ More builtin variable in `django.template.context_processors.auth` as `Context P
 
 ##### 4. Check if a user belongs to a specific group
 
-```html
+```django
 {% if "admin" in user.groups.all %}
     <p>You are an admin!</p>
 {% endif %}
